@@ -22,6 +22,7 @@ const initialTodos: Todo[] = [
 function App() {
     const [todos, setTodos] = useState(initialTodos)
 
+
     const toggleTodo: ToggleTodo = (selectedTodo: Todo) => {
         const newTodos = todos.map(todo => {
             if (todo === selectedTodo) {
@@ -74,9 +75,9 @@ function App() {
 
         <>
             <ToggleAll toggleAllTodos={toggleAddTodos}></ToggleAll>
-            <TodoList todos={todos} toggleTodo={toggleTodo} deleteTodo={deleteTodo}/>
+            <TodoList todos={todos} toggleTodo={toggleTodo} deleteTodo={deleteTodo} editToDo={editToDo}/>
             <AddTodoForm addTodo={addTodo}/>
-            <EditToDo editToDo={editToDo} todos={todos}/>
+
         </>
 
     )
